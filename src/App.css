@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  margin-top:100px;
+}
+
+.green{
+  background-color: #b4dd27 !important;
+}
+
+.yellow{
+  background-color: #ffd245 !important;
+}
+
+.red {
+  background-color: red !important;
+}
+
+.Game{
+  font-size:48px;
+}
+
+.button{
+  padding: 20px 50px 20px 50px;
+  font-size: 48px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+
+.questionId{
+  padding: 20px;
+  background: black;
+  color:white;
+  text-align:center;
+}
+
+.QuestionMark{
+  width:10%;
+}
+
