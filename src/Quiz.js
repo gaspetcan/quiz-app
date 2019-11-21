@@ -13,6 +13,7 @@ class Quiz extends React.Component{
             started: false
         };
         this.nextQuestion = this.nextQuestion.bind(this);
+        this.tryAgain = this.tryAgain.bind(this);
     }
 
     nextQuestion(){
@@ -30,6 +31,16 @@ class Quiz extends React.Component{
         });
     }
 
+    tryAgain(){
+        this.setState({
+            questionId : 0,
+            question : "",
+            answers : null,
+            correctAnswer : "",
+            started: false
+        })
+    }
+
     render(){
         return (
             <div>
@@ -43,7 +54,8 @@ class Quiz extends React.Component{
                             correctAnswer ={this.state.correctAnswer}
                             nextQuestion = {this.nextQuestion}
                             />:
-                            <Question/>
+                            <Question
+                            tryAgain = {this.tryAgain}/>
                         }
                     </div>:
                     <div>

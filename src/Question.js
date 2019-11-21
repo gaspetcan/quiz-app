@@ -14,7 +14,8 @@ class Question extends React.Component{
                         }
                         <Answers answers = {this.props.answers}
                         correctAnswer={this.props.correctAnswer}
-                        nextQuestion = {this.props.nextQuestion}/>
+                        nextQuestion = {this.props.nextQuestion}
+                        tryAgain = {this.props.tryAgain}/>
                     </div>:null
                 }
 
