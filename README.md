@@ -1,4 +1,5 @@
 ![quiz](https://media.giphy.com/media/LRmPuyuwfQOnubA1Sy/giphy.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
