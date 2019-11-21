@@ -12,27 +12,32 @@ class Answers extends React.Component{
     checkCondition = (e, answer) =>{
                this.setState({
                    color: "yellow"
-               })
+               });
                setTimeout(
                    function() {
                        if(answer === this.props.correctAnswer)
                        {
                            this.setState({color: "green",
                                           score: this.state.score +1});
+                           setTimeout(
+                               function(){
+                                   this.setState({color:""});
+                                   this.props.nextQuestion();
+                               }.bind(this),1000
+                           )
                        }
                        else{
                            this.setState({color: "red"})
+                           setTimeout(
+                               function(){
+                                   this.setState({color:""});
+                                   this.props.nextQuestion();
+                               }.bind(this),1000
+                           )
                        }
                    }.bind(this),
                    1000
                );
-
-               setTimeout(
-                   function(){
-                       this.setState({color:""});
-                       this.props.nextQuestion();
-                   }.bind(this),2000
-               )
     };
 
     render(){
@@ -58,9 +63,9 @@ class Answers extends React.Component{
                                 {answers.D}
                             </button>
                         </div>:
-                        <div className={"stars"}>
-                            <h1>{this.state.score}</h1>
-                        </div>
+                            <h1 className={"questionId"}>
+                                <h1>Score {this.state.score}</h1>
+                            </h1>
                     }
             </div>
         );

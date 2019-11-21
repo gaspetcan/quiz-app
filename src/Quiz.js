@@ -28,8 +28,6 @@ class Quiz extends React.Component{
                 started: true
             })
         });
-        console.log("Question Length:"+ Questions.length)
-        console.log("Question ID:" + this.state.questionId)
     }
 
     render(){
